@@ -44,7 +44,8 @@ pytest tests/ -vv --cov=src --cov-report=xml
 pytest tests/ -vv --cov=src
 ```
 
-## Ciclo de Desenvolvimento:
+
+## ${\color {#a65a0a} Ciclo  \ de \ Desenvolvimento:}$  
 
 ![ciclo de desenvolvimento](https://github.com/user-attachments/assets/840e089a-e081-4594-babe-1027670ccd87)
 
