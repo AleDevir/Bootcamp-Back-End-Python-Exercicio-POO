@@ -28,14 +28,24 @@ Verificação Estática de Código (pylint e mypy):
 Para testar todos:
 
 ```
+# Para testar todos:
 pylint *
 
-# Para testar cada arquivo:
-pylint <nome_do_arquivo.py> util
+#Para testar cada arquivo:
+pylint <nome_do_arquivo.py> 
 
-# Para testar um ou mais arquivos
+#Para testar um ou mais arquivos
 mypy --show-error-codes --check-untyped-defs <nome_do_arquivo.py>  <nome_da_pasta>
 
-# Ciclo de desenvolvimento:
-![ciclo de desenvolvimento](https://github.com/user-attachments/assets/7260e388-587c-4ef5-aa71-581937695949)
+# Testes com relatório de cobertura para o sonar (coverage.xml).
+pytest tests/ -vv --cov=src --cov-report=xml
+
+# Testes com relatório de cobertura exibido no console.
+pytest tests/ -vv --cov=src
+```
+
+## Ciclo de Desenvolvimento:
+
+![ciclo de desenvolvimento](https://github.com/user-attachments/assets/840e089a-e081-4594-babe-1027670ccd87)
+
 
