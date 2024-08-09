@@ -43,8 +43,8 @@ pytest tests/ -vv --cov=src --cov-report=xml
 # Testes com relatório de cobertura exibido no console.
 pytest tests/ -vv --cov=src
 ```
-### Pré-requisitos 
-[pre-requisitos](https://github.com/AleDevir/Bootcamp-Back-End-Python-Exercicio-POO/blob/desafio_poo_Squad_Grace_Hopper/pre-requisitos.md)
+
+## [Pre-requisitos](https://github.com/AleDevir/Bootcamp-Back-End-Python-Exercicio-POO/blob/desafio_poo_Squad_Grace_Hopper/pre-requisitos.md)
 
 ## ${\color {#a65a0a} Ciclo  \ de \ Desenvolvimento:}$  
 
