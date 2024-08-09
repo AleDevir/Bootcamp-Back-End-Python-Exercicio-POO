@@ -2,9 +2,9 @@
 
 [Python](https://www.python.org/) Versão Python 3.12
 
-[VScode](https://github.com/AleDevir/cypress-basico-v2/blob/main/lessons/_pre-requirements_.md) Visual Studio Code versão 1.92.1 
+[VScode](https://code.visualstudio.com/) Visual Studio Code versão 1.92.1 
 
-### Plugns recomendados:
-+ Pylance
-+ Pylint
-+ Python
+### Plugins recomendados:
++ [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)
++ [Pylint](https://marketplace.visualstudio.com/items?itemName=ms-python.pylint)
++ [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
