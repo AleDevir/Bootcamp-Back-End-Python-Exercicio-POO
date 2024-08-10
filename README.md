@@ -51,6 +51,6 @@ pytest tests/ -vv --cov=src
 ![ciclo de desenvolvimento](https://github.com/user-attachments/assets/840e089a-e081-4594-babe-1027670ccd87)
 
 ## Diagrama de Classes:
-![Modelo de classe biblioteca drawio](https://github.com/user-attachments/assets/daa0bd7a-bd76-450e-8c87-e6f33d4db0cd)
+![Modelo de classe biblioteca drawio](https://github.com/AleDevir/Bootcamp-Back-End-Python-Exercicio-POO/blob/desafio_poo_Squad_Grace_Hopper/docs/Modelo%20de%20classe%20biblioteca.drawio.png)
 
 
