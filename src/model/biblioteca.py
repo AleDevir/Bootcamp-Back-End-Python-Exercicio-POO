@@ -22,11 +22,32 @@ class Biblioteca(Base):
         Inicialização
         '''
         super().__init__(identificacao)
-        self.usuarios: list[Usuario] = usuarios
-        self.livros: list[Livro] = livros
-        self.emprestimos: list[Emprestimo] = []
+        self._usuarios: list[Usuario] = usuarios
+        self._livros: list[Livro] = livros
+        self._emprestimos: list[Emprestimo] = []
         if emprestimos:
-            self.emprestimos = emprestimos
+            self._emprestimos = emprestimos
+
+    @property
+    def usuarios(self) -> list[Usuario]:
+        '''
+        Lista de usuários        
+        '''
+        return self._usuarios
+
+    @property
+    def livros(self) -> list[Livro]:
+        '''
+        Lista de livros       
+        '''
+        return self._livros
+
+    @property
+    def emprestimos(self) -> list[Emprestimo]:
+        '''
+        Lista de empréstimos       
+        '''
+        return self._emprestimos
 
     def realizar_emprestimo(self, nome_usuario: str, titulo_livro: str) -> Emprestimo:
         '''
