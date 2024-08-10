@@ -1,8 +1,6 @@
 '''
 Classe Livro
 '''
-import livro_renovavel
-import livro_nao_renovavel
 import genero
 import autor
 import base
