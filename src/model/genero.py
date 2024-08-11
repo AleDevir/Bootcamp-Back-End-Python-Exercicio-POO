@@ -1,8 +1,10 @@
 #classe genero
 
-class Genero(Base):
-    def generos:
-    list[genero.Genero]
+from src.model.base import Base
 
-    
-nome: str
+class Genero(Base):
+    def __init__(self, nome:str, identificacao: int = 0):
+    # Chama o construtor da classe base com o parâmetro identificacao
+        super().__init__(identificacao)
+        # Atribui o nome ao atributo da instância
+        self.nome = nome
