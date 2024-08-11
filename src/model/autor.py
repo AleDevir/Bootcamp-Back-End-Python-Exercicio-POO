@@ -1,6 +1,7 @@
 '''
 classe Autor
 '''
+
 from src.model.base import Base
 
 class Autor(Base):
