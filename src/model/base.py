@@ -2,6 +2,12 @@
 Classe Base
 '''
 
-class Base:
-    def __init__(self, identificacao: int):
-        self.identificacao = identificacao
+from abc import ABC
+class Base(ABC):
+    def __init__(self, identificacao: int = 0) -> None:
+        super().__init__()
+        self._identificacao: int = identificacao
+
+    @property
+    def identificacao(self) -> int:
+        return self._identificacao

@@ -1,6 +1,8 @@
 '''
 classe Usuario
 '''
+
+from src.model.base import Base
 class Usuario(Base):
     def __init__(self, identificacao: int, nome: str, nacionalidade: str, telefone: str):
         super().__init__(identificacao)
@@ -14,3 +16,4 @@ class Usuario(Base):
     def atualizar_telefone(self, novo_telefone: str):
         self.telefone = novo_telefone
         print(f"Telefone do usuário {self.nome} atualizado para {self.telefone}")
+
