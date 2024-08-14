@@ -1,13 +1,13 @@
 '''
 Classe Livro
 '''
-import genero
-import autor
-import base
-import exemplar
-from abc import ABC, abstractmethod
+from src.model.genero import Genero
+from src.model.autor import Autor
+from src.model.base import Base
+from src.model.exemplar import Elxemplar
+from abc import abstractmethod
 
-class Livro(base):
+class Livro(Base):
     def __init__(self, identificacao: int,titulo: str, editora: str, generos: list[genero.Genero], exemplares: list[exemplar.Exemplar], autores: list[autor.Autor], renovacoes_permitidas: int):
         super().__init__(identificacao)
         self.titulo = titulo
@@ -19,17 +19,25 @@ class Livro(base):
 
     @property
     def possui_exemplar_disponivel(self) -> bool:
-        pass
+        return any(volume.disponivel for volume in self.exemplares)
 
     def retirar_exemplar(self) -> exemplar.Exemplar:
-        pass
+        for volume in self.exemplares:
+            if volume.disponivel:
+                volume.disponivel = False
+                return volume
+        raise Exception("Nenhum exemplar disponível.")
 
     def pode_ser_renovado(self) -> bool:
-        pass
+        return self.renovacoes_permitidas > 0
     
     @abstractmethod
-    def renovar_emprestimo_exemplar(self, exemplar: Exemplar) -> None:
+    def renovar_emprestimo_exemplar(self, exemplar: exemplar.Exemplar) -> None:
         pass
 
     def devolver_exemplar(self, identificacao_exemplar) -> None:
-        pass
+        for volume in self.exemplares:
+            if volume.identificacao == identificacao_exemplar:
+                volume.disponivel = True
+                return volume
+        raise Exception("Exemplar não encontrado.")
