@@ -35,9 +35,9 @@ OPCOES:  Final[dict[str, str ]] = {
 
 BIBLIOTECA: Final[Biblioteca] = Biblioteca(
     usuarios = [
-        Usuario(1, 'Ale', '111111111', 'brasileira'),
-        Usuario(2, 'Elanor', '222222222', 'neozelandes'),
-        Usuario(3, 'Amana', '333333333', 'brasileira')
+        Usuario(identificacao=1, nome='Ale', nacionalidade='brasileira', telefone='111111111',),
+        Usuario(identificacao=2, nome='Elanor', nacionalidade='neozelandes', telefone='222222222',),
+        Usuario(identificacao=3, nome='Amana',  nacionalidade='brasileira', telefone='333333333',)
     ],
     livros = [
         LivroRenovavel(
