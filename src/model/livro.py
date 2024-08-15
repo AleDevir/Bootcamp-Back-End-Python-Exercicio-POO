@@ -8,7 +8,7 @@ from src.model.exemplar import Exemplar
 from abc import abstractmethod
 
 class Livro(Base):
-    def __init__(self, identificacao: int,titulo: str, editora: str, generos: list[Genero], exemplares: list[.Exemplar], autores: list[Autor], renovacoes_permitidas: int):
+    def __init__(self, identificacao: int,titulo: str, editora: str, generos: list[Genero], exemplares: list[Exemplar], autores: list[Autor], renovacoes_permitidas: int):
         super().__init__(identificacao)
         self.titulo = titulo
         self.editora = editora
