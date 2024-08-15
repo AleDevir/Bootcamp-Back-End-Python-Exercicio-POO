@@ -185,10 +185,10 @@ def exibir_ficha(msg: str, emprestimo: Emprestimo) -> None:
                 {bright_amarelo('Nome do usuário: ')}{emprestimo.usuario.nome}
                 {bright_amarelo('Título: ')}{emprestimo.livro.titulo}
                 {bright_amarelo('Editora: ')}{emprestimo.livro.editora}
-                {bright_amarelo('Autor(s): ')}{', '.join([a.nome for a in emprestimo.livro.autores])} # pylint: disable=line-too-long
-                {bright_amarelo('Gêneros: ')}{', '.join([g.nome for g in emprestimo.livro.generos])} # pylint: disable=line-too-long
-                {bright_amarelo('Data do empréstimo: ')}{emprestimo.data_emprestimo}
-                {bright_amarelo('Data da devolução do empréstimo: ')}{emprestimo.data_devolucao if emprestimo.data_devolucao else '-'} # pylint: disable=line-too-long
+                {bright_amarelo('Autor(s): ')}{', '.join([a.nome for a in emprestimo.livro.autores])}
+                {bright_amarelo('Gêneros: ')}{', '.join([g.nome for g in emprestimo.livro.generos])}
+                {bright_amarelo('Data do empréstimo: ')}{datetime_para_str(emprestimo.data_emprestimo)}
+                {bright_amarelo('Data da devolução do empréstimo: ')}{datetime_para_str(emprestimo.data_devolucao) if emprestimo.data_devolucao else '-'}
                 {bright_amarelo('Exemplar: ')}{emprestimo.exemplar.identificacao}
                 {bright_amarelo(LINHA_PONTILHADA)}
     """)
