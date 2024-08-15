@@ -4,11 +4,11 @@ Classe Livro
 from src.model.genero import Genero
 from src.model.autor import Autor
 from src.model.base import Base
-from src.model.exemplar import Elxemplar
+from src.model.exemplar import Exemplar
 from abc import abstractmethod
 
 class Livro(Base):
-    def __init__(self, identificacao: int,titulo: str, editora: str, generos: list[genero.Genero], exemplares: list[exemplar.Exemplar], autores: list[autor.Autor], renovacoes_permitidas: int):
+    def __init__(self, identificacao: int,titulo: str, editora: str, generos: list[Genero], exemplares: list[.Exemplar], autores: list[Autor], renovacoes_permitidas: int):
         super().__init__(identificacao)
         self.titulo = titulo
         self.editora = editora
@@ -32,7 +32,7 @@ class Livro(Base):
         return self.renovacoes_permitidas > 0
     
     @abstractmethod
-    def renovar_emprestimo_exemplar(self, exemplar: exemplar.Exemplar) -> None:
+    def renovar_emprestimo_exemplar(self, exemplar: Exemplar) -> None:
         pass
 
     def devolver_exemplar(self, identificacao_exemplar) -> None:
