@@ -1,24 +1,22 @@
+from src.model.base import Base
+from src.model.emprestimo import Emprestimo
+from src.model.usuario import Usuario
+from src.model.livro import Livro
+from src.model.exemplar import Exemplar
+
 class LivroRenovavel(Livro):
+#Classe para livros que podem ter seu empréstimo renovado.
+#Herda de Livro e adiciona a funcionalidade de renovação.
 
-    def __init__(self, renovacoes_permitidas: int, identificacao: int,titulo: str, editora: str, generos: list[genero.Genero], exemplares: list[exemplar.Exemplar], autores: list[autor.Autor]):
-        super().__init__(identificacao)
-        self.renovacoes_permitidas = renovacoes_permitidas
-        self.titulo = titulo
-        self.autores = autores
+    def renovar_emprestimo_exemplar(self, exemplar: Exemplar) -> None:
+#Renova o empréstimo do exemplar se as validações forem passadas.
+#param exemplar: O exemplar que está sendo renovado.
+#raises ValueError: Se o exemplar não pode ser renovado devido ao limite de renovações.
 
-    def renovacoes(self):
-        if self.renovacoes_permitidas > 0:
-            self.renovacoes_permitidas -= 1
-            print(f"Renovação realizada. Renovações disponíveis: {self.renovacoes_permitidas}")
-        else:
-            print("Número máximo de renovações atingido.")
-
-    def restabelecer_renovacoes(self):
-        self.renovacoes_permitidas = self.renovacoes_permitidas
-        print(f"Renovações restabelecidas. Renovações disponíveis: {self.renovacoes_permitidas}")
-
-    def __str__(self):
-        return f"{self.titulo} por {self.autores} - Renovações permitidas: {self.renovacoes_permitidas}"
+        if not exemplar.pode_renovar(self.renovacoes_permitidas):
+            raise ValueError(f'Não é possível renovar o empréstimo do livro "{self.titulo}. Você já atingiu o limite máximo de renovações permitidas.')
+        
+        exemplar.acrescentar_numero_renovacoes()
 
 
     
