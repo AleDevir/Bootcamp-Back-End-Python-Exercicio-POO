@@ -53,4 +53,10 @@ pytest tests/ -vv --cov=src
 ## Diagrama de Classes:
 ![Modelo de classe biblioteca drawio](https://github.com/AleDevir/Bootcamp-Back-End-Python-Exercicio-POO/blob/desafio_poo_Squad_Grace_Hopper/docs/Modelo%20de%20classe%20biblioteca.drawio.png)
 
+## Diagramas de sequência
 
+![Emprestimo](https://github.com/AleDevir/Bootcamp-Back-End-Python-Exercicio-POO/blob/desafio_poo_Squad_Grace_Hopper/docs/emprestimo.png)
+
+![Renovação](https://github.com/AleDevir/Bootcamp-Back-End-Python-Exercicio-POO/blob/desafio_poo_Squad_Grace_Hopper/docs/renovacao.png)
+
+![devolução](https://github.com/AleDevir/Bootcamp-Back-End-Python-Exercicio-POO/blob/desafio_poo_Squad_Grace_Hopper/docs/devolucao.png)
