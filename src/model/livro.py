@@ -21,7 +21,7 @@ class Livro(Base):
     def possui_exemplar_disponivel(self) -> bool:
         return any(volume.disponivel for volume in self.exemplares)
 
-    def retirar_exemplar(self) -> exemplar.Exemplar:
+    def retirar_exemplar(self) -> Exemplar:
         for volume in self.exemplares:
             if volume.disponivel:
                 volume.disponivel = False
